@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090808"
+    tools:context="MainActivity">
+
+    <TextView
+        android:id="@+id/txttitulo"
+        android:layout_width="392dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:text="Calculadora do Crozara"
+        android:textAlignment="center"
+        android:textColor="#F10606"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextN1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <EditText
+        android:id="@+id/editTextN1"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E4DBDB"
+        android:ems="10"
+        android:hint="Digite aqui seu primeiro número:"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#E4DCDC"
+        android:textColorHint="#F6EFEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttitulo" />
+
+    <EditText
+        android:id="@+id/editTextN2"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#F6EDED"
+        android:ems="10"
+        android:hint="Digite aqui seu segundo número:"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#E4DCDC"
+        android:textColorHint="#FAF6F6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <EditText
+        android:id="@+id/editTextResposta"
+        android:layout_width="294dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="536dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="#EFE9E9"
+        android:ems="10"
+        android:hint="Sua resosta é:"
+        android:inputType="text"
+        android:textColorHint="#F6F1F1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMemo"
+        android:layout_width="297dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#E1D6D6"
+        android:ems="10"
+        android:hint="Memoria:"
+        android:inputType="text"
+        android:textColorHint="#F4EFEF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#E80909"
+        android:text="Finalizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSomar"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdicaomemo"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtrair"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/editTextResposta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpamemo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/editTextResposta"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/btnChamamemo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnLimpamemo"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="MC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnChamamemo"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiplicar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnChamamemo"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="MR"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/btnLimpamemo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSubtracaomemo"
+        app:layout_constraintTop_toBottomOf="@+id/btnDividir"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/editTextResposta"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtracaomemo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnSubtracaomemo"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="M-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/btnChamamemo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAdicaomemo"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtrair"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/editTextResposta"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdicaomemo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnAdicaomemo"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="M+"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtracaomemo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSomar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E80E0E"
+        android:text="*"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpamemo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDividir"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="/"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnChamamemo"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSubtrair"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnSubtrair"
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#E80E0E"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubtracaomemo"
+        app:layout_constraintEnd_toStartOf="@+id/btnDividir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSomar"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN2"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
